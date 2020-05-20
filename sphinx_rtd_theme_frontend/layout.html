@@ -103,6 +103,8 @@
 <body class="wy-body-for-nav" role="document">
 
     {% include "z_top_menu.html" %}
+  
+  {% if not theme_z_ignore_sidebar %}
 
   <div class="wy-grid-for-nav">
 
@@ -143,7 +145,6 @@
       </div>
 
       {% block menu %}
-      {% if not theme_z_ignore_sidebar %}
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
           {% if toctree %}
@@ -161,12 +162,13 @@
       </div>
       &nbsp;
 
-      {% endif %}
 
       {% endblock %}
               
       
     </nav>
+
+  {% endif %}
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
