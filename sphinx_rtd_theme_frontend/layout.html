@@ -142,6 +142,7 @@
         {% endblock %}
       </div>
 
+      {% if not THIS_IS_THE_FRONTEND %}
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
         {% block menu %}
           {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
@@ -152,13 +153,19 @@
               <div class="local-toc">{{ toc }}</div>
           {% endif %}
         {% endblock %}
+
+
         
         <!-- add paypal and dronecode logos -->
         {% include "z_sidebar_additions.html" %}
         <!-- endadd paypal and dronecode logos -->
-              
+
       </div>
       &nbsp;
+
+      {% endif %}        
+              
+      
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
