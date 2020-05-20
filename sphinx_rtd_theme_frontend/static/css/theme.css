@@ -4548,6 +4548,12 @@ div[class^='highlight'] pre {
   margin: auto;
 }
 
+.wy-nav-content-frontend {
+  padding: 1.618em 3.236em;
+  height: 100%;
+  margin: auto;
+}
+
 .wy-body-mask {
   position: fixed;
   width: 100%;
