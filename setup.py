@@ -1,25 +1,25 @@
 # -*- coding: utf-8 -*-
 """`sphinx_rtd_theme` lives on `Github`_.
 
-.. _github: https://www.github.com/ArduPilot/sphinx_rtd_theme
+.. _github: https://www.github.com/brunoolivieri/sphinx_rtd_theme_frontend
 
 """
 from setuptools import setup
-from sphinx_rtd_theme import __version__
+from sphinx_rtd_theme_frontend import __version__
 
 
 setup(
-    name='sphinx_rtd_theme',
+    name='sphinx_rtd_theme_frontend',
     version=__version__,
-    url='https://github.com/ArduPilot/sphinx_rtd_theme/',
+    url='https://github.com/brunoolivieri/sphinx_rtd_theme_frontend/',
     license='MIT',
     author='Dave Snider',
     author_email='dave.snider@gmail.com',
     description='ReadTheDocs.org theme for Sphinx, updated from DaveSnider version to have a site toolbar version.',
     long_description=open('README.rst').read(),
     zip_safe=False,
-    packages=['sphinx_rtd_theme'],
-    package_data={'sphinx_rtd_theme': [
+    packages=['sphinx_rtd_theme_frontend'],
+    package_data={'sphinx_rtd_theme_frontend': [
         'theme.conf',
         '*.html',
         'static/css/*.css',
