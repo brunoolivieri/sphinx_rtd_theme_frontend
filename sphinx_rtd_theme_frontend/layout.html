@@ -183,15 +183,12 @@
       {# PAGE CONTENT #}
       {% if not theme_z_is_the_frontend_site %}      
         <div class="wy-nav-content">
-      {% else %}       
+          {% include "breadcrumbs.html" %}
+      {% else %}
+        <br><br><br>         
         <div class="wy-nav-content-frontend">
       {% endif %}     
         <div class="rst-content">
-          {% if not theme_z_is_the_frontend_site %}
-          {% include "breadcrumbs.html" %}
-          {% else %}
-          <br><br><br>
-          {% endif %}
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             {% block body %}{% endblock %}
