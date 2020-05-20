@@ -143,7 +143,7 @@
       </div>
 
       {% block menu %}
-      {% if not THIS_IS_THE_FRONTEND %}
+      {% if not ignore_sidebar %}
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
           {% if toctree %}
