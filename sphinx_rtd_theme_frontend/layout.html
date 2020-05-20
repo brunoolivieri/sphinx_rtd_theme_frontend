@@ -98,13 +98,13 @@
 
 </head>
 
-
+{% include "z_top_menu.html" %}
+  
+{% if not theme_z_ignore_sidebar %}
 
 <body class="wy-body-for-nav" role="document">
 
-    {% include "z_top_menu.html" %}
-  
-  {% if not theme_z_ignore_sidebar %}
+
 
   <div class="wy-grid-for-nav">
 
@@ -168,7 +168,7 @@
       
     </nav>
 
-  {% endif %}
+
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
@@ -178,11 +178,14 @@
         <a href="{{ pathto(master_doc) }}">{{ project }}</a>
       </nav>
 
+  {% endif %}
 
       {# PAGE CONTENT #}
       <div class="wy-nav-content">
         <div class="rst-content">
+          {% if not theme_z_ignore_sidebar %}
           {% include "breadcrumbs.html" %}
+          {% endif %}
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             {% block body %}{% endblock %}
