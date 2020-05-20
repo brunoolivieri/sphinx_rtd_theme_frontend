@@ -142,9 +142,9 @@
         {% endblock %}
       </div>
 
+      {% block menu %}
       {% if not THIS_IS_THE_FRONTEND %}
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        {% block menu %}
           {% set toctree = toctree(maxdepth=4, collapse=theme_collapse_navigation, includehidden=True) %}
           {% if toctree %}
               {{ toctree }}
@@ -152,8 +152,6 @@
               <!-- Local TOC -->
               <div class="local-toc">{{ toc }}</div>
           {% endif %}
-        {% endblock %}
-
 
         
         <!-- add paypal and dronecode logos -->
@@ -164,6 +162,7 @@
       &nbsp;
 
       {% endif %}        
+      {% endblock %}
               
       
     </nav>
