@@ -1,4 +1,8 @@
 {# TEMPLATE VAR SETTINGS #}
+
+{% if not theme_z_is_the_frontend_site %}
+
+
 {%- set url_root = pathto('', 1) %}
 {%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 {%- if not embedded and docstitle %}
@@ -101,8 +105,7 @@
 
 
 
-{% if not theme_z_is_the_frontend_site %}
-   {% include "z_top_menu.html" %}
+{% include "z_top_menu.html" %}
 
 
 <body class="wy-body-for-nav" role="document">
@@ -184,13 +187,8 @@
   {% endif %}
 
       {# PAGE CONTENT #}
-      {% if not theme_z_is_the_frontend_site %}      
         <div class="wy-nav-content">
           {% include "breadcrumbs.html" %}
-      {% else %}
-        <br><br><br>         
-        <div class="wy-nav-content-frontend">
-      {% endif %}     
         <div class="rst-content">
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
@@ -247,6 +245,8 @@
   {% endif %}
 
   {%- block footer %} {% endblock %}
+
+{% endif %}
 
 
 <!-- Google Analytics -->
